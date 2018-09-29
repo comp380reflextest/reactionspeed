@@ -5,6 +5,7 @@ Basic
 - As a user, I want to be able to define the required accuracy (length/width of inner squares).
 - As a user, I want to be able to define the speed (time between each successive check)
 - As a user, I want basic statistics to be shown to me at the end of the test (accuracy %)
+- As a user, I want to be able to start/stop the test
 
 Mid-reach
 - As a user, I want to be able to save all configuration settings
