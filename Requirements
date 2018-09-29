@@ -1,0 +1,18 @@
+User Stories
+
+Basic
+- As a user, I want to be able to define the total size (length/width) of the test area.
+- As a user, I want to be able to define the required accuracy (length/width of inner squares).
+- As a user, I want to be able to define the speed (time between each successive check)
+- As a user, I want basic statistics to be shown to me at the end of the test (accuracy %)
+
+Mid-reach
+- As a user, I want to be able to save all configuration settings
+- As a user, I want to be able to customize my test area (color)
+- As a user, I want detailed statistics to be shown to me at the end of the test (average speed, etc.)
+- As a user, I want to be able to define multiple, disjointed test areas
+
+Reach
+- As a user, I want to be able to drag/drop the location of my test area(s)
+- As a user, I want to be able to lock the location of my test area(s)
+- As a user, I want to be able to snap test areas together
