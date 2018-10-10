@@ -1,3 +1,10 @@
+
+Requirements
+The purpose of the software is to provide a means to test a user's reaction time. A user must be able to customize the test 
+to their needs, e.g. the testing area's size, the time until failure (duration at which the user is recognized to have reacted too slowly),
+etc. The software must provide information about the user's performance (their actual speed, their rate of failure, their accuracy, etc.)
+
+
 User Stories
 
 Basic
