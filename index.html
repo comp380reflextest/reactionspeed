@@ -1,130 +1,361 @@
-<body>
-  <table width="225" border="3" cellpadding="15" cellspacing="0">
-    <tbody>
-      <tr>
-        <tr>
-          <td id="00"></td>
-          <td id="01"></td>
-          <td id="02"></td>
-          <td id="03"></td>
-          <td id="04"></td>
-          <td id="05"></td>
-          <td id="06"></td>
-          <td id="07"></td>
-          <td id="08"></td>
-          <td id="09"></td>
-        </tr>
-        <td id="10"></td>
-        <td id="11"></td>
-        <td id="12"></td>
-        <td id="13"></td>
-        <td id="14"></td>
-        <td id="15"></td>
-        <td id="16"></td>
-        <td id="17"></td>
-        <td id="18"></td>
-        <td id="19"></td>
-      </tr>
-      <tr>
-        <td id="20"></td>
-        <td id="21"></td>
-        <td id="22"></td>
-        <td id="23"></td>
-        <td id="24"></td>
-        <td id="25"></td>
-        <td id="26"></td>
-        <td id="27"></td>
-        <td id="28"></td>
-        <td id="29"></td>
-      </tr>
-      <tr>
-        <td id="30"></td>
-        <td id="31"></td>
-        <td id="32"></td>
-        <td id="33"></td>
-        <td id="34"></td>
-        <td id="35"></td>
-        <td id="36"></td>
-        <td id="37"></td>
-        <td id="38"></td>
-        <td id="39"></td>
-      </tr>
-      <tr>
-        <td id="40"></td>
-        <td id="41"></td>
-        <td id="42"></td>
-        <td id="43"></td>
-        <td id="44"></td>
-        <td id="45"></td>
-        <td id="46"></td>
-        <td id="47"></td>
-        <td id="48"></td>
-        <td id="49"></td>
-      </tr>
-      <tr>
-        <td id="50"></td>
-        <td id="51"></td>
-        <td id="52"></td>
-        <td id="53"></td>
-        <td id="54"></td>
-        <td id="55"></td>
-        <td id="56"></td>
-        <td id="57"></td>
-        <td id="58"></td>
-        <td id="59"></td>
-      </tr>
-      <tr>
-        <td id="60"></td>
-        <td id="61"></td>
-        <td id="62"></td>
-        <td id="63"></td>
-        <td id="64"></td>
-        <td id="65"></td>
-        <td id="66"></td>
-        <td id="67"></td>
-        <td id="68"></td>
-        <td id="69"></td>
-      </tr>
-      <tr>
-        <td id="71"></td>
-        <td id="71"></td>
-        <td id="72"></td>
-        <td id="73"></td>
-        <td id="74"></td>
-        <td id="75"></td>
-        <td id="76"></td>
-        <td id="77"></td>
-        <td id="78"></td>
-        <td id="79"></td>
-      </tr>
-      <tr>
-        <td id="80"></td>
-        <td id="81"></td>
-        <td id="82"></td>
-        <td id="83"></td>
-        <td id="84"></td>
-        <td id="85"></td>
-        <td id="86"></td>
-        <td id="87"></td>
-        <td id="88"></td>
-        <td id="89"></td>
-      </tr>
-      <tr>
-        <td id="90"></td>
-        <td id="91"></td>
-        <td id="92"></td>
-        <td id="93"></td>
-        <td id="94"></td>
-        <td id="95"></td>
-        <td id="96"></td>
-        <td id="97"></td>
-        <td id="98"></td>
-        <td id="99"></td>
-      </tr>
-    </tbody>
-  </table>
-  <script>
-    field = Math.floor(Math.random() * Math.floor(100));
-    document.getElementById(field).style.backgroundColor = "green";
-  </script>
-</body>
+<!DOCTYPE html>
+<html>
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">p.MsoNormal,li.MsoNormal,div.MsoNormal{margin:0;margin-bottom:.0001pt;font-size:12.0pt;font-family:"Times New Roman"}h2{margin-top:12.0pt;margin-right:0;margin-bottom:3.0pt;margin-left:0;page-break-after:avoid;font-size:14.0pt;font-family:Arial;font-style:italic}h3{margin-top:12.0pt;margin-right:0;margin-bottom:3.0pt;margin-left:0;page-break-after:avoid;font-size:13.0pt;font-family:Arial}a:link,span.MsoHyperlink{color:blue;text-decoration:underline}a:visited,span.MsoHyperlinkFollowed{color:purple;text-decoration:underline}@page Section1{size:8.5in 11.0in;margin:1.0in 1.25in 1.0in 1.25in}div.Section1{page:Section1}body.c4{cursor:default}input.c3{width:75px}input.c2{font-weight:bold;width:75px}table.c1{border-color:blue;boder-style:outset}table.c1 td{width:21px;height:21px}table.c1 tr{height:21px}.ui-slider .ui-slider-handle{border-radius:10px;border:1px solid rgba(0,0,0,0.5);background:grey;background:rgba(0,0,0,0.1);box-shadow:0 2px 6px rgba(0,0,0,0.5),inset 0 1px rgba(25,25,25,0.5),inset 0 10px 20px rgba(25,25,25,0.5),inset 0 -15px 30px rgba(0,0,0,0.8)}.glass{color:white;border:1px solid rgba(0,0,0,0.5);border-radius:10px;background:rgba(0,0,0,0.1);box-shadow:0 2px 6px rgba(0,0,0,0.5),inset 0 1px rgba(25,25,25,0.5),inset 0 10px 20px rgba(25,25,25,0.5),inset 0 -15px 30px rgba(0,0,0,0.8);padding:.2em .4em}</style>
+    <link type="text/css" rel="stylesheet" href="./jquery-ui-1.10.2.custom.min.css">
+    <script type="text/javascript" src="./jquery.min.js(1).download"></script>
+    <script type="text/javascript" src="./jquery-ui-1.10.2.custom.min.js.download"></script>
+    <script type="text/javascript" src="./es5-shim.js.download"></script>
+    <script type="text/javascript" src="./fix_height.js.download"></script>
+    <script type="text/javascript" src="./misc.js"></script>
+    <script type="text/javascript" src="./generator.js"></script>
+<!--    <script type="text/javascript" src="reflex3.js"></script>-->
+<script type="text/javascript">
+    var maxBox;
+    var index;
+    var objBox;
+    var box;
+    var blnGameStarted;
+    var wrongClicks;
+    var displayCount;
+    var tlog;
+    var intervalTime;
+    var timer;
+    var game;
+    var btnStart;
+    var btnRestart;
+    index = 11;
+    blnGameStarted = false;
+    wrongClicks = 0;
+    displayCount = 0;
+    var boxes = [];
+    var clicked = false;
+    var is_ie8 = false;
+    var slider;
+    var txtScore;
+    var txtTime;
+    var timeValue;
+    var scoreValue = 0;
+    var lastSpeedValue = 100;
+    var timeBase = 600;
+    var timeMin = 400;
+    var timeOut = 1000;
+    if (localStorage && localStorage.lastSpeedValue) {
+        lastSpeedValue = JSON.parse(localStorage.lastSpeedValue);
+        updateSpeed(lastSpeedValue)
+    }
+    var isInit = false;
+
+    function init() {
+        if (!isInit) {
+            slider = $("#speed_slider");
+            slider.slider({
+                min: 0,
+                max: 100,
+                value: lastSpeedValue,
+                slide: updateSpeedHndlr
+            });
+            txtScore = document.getElementById("txtScore");
+            txtTime = document.getElementById("txtTime");
+            btnStart = document.getElementById("btnStart");
+            btnRestart = document.getElementById("btnRestart");
+            tlog = document.getElementById("logg");
+            intervalTime = document.getElementById("intervalTime");
+            updateSpeedStr();
+            initialize();
+            if (is_ie8) {
+                intervalTime.style.color = "black";
+                txtScore.style.color = "black";
+                txtTime.style.color = "black";
+                btnRestart.style.color = "black";
+                btnStart.style.color = "black";
+                txtScore.innerHTML = 0;
+                document.styleSheets[0].addRule("#txtScore:after", "content: '" + scoreValue + "';")
+            }
+            isInit = true
+        }
+    }
+    $.ready(init);
+    if (window.addEventListener) {
+        window.addEventListener("unload", function() {
+            if (localStorage) {
+                localStorage.lastSpeedValue = lastSpeedValue
+            }
+        });
+        window.addEventListener("load", init);
+        window.addEventListener("DOMContentLoaded", init)
+    } else {
+        window.onload = init;
+        is_ie8 = true
+    }
+
+    function updateSpeedStr() {
+        intervalTime.innerHTML = "Speed: " + (timeOut / 1000) + "s"
+    }
+
+    function updateSpeedHndlr(a, b) {
+        lastSpeedValue = b.value;
+        updateSpeed(lastSpeedValue);
+        updateSpeedStr()
+    }
+
+    function updateSpeed(a) {
+        timeOut = Math.floor(timeBase * (a / 100)) + timeMin
+    }
+    var totalTime = 60;
+
+    function initialize() {
+      var checkBox = document.getElementById("myCheck");
+        logf("...");
+        displayCount = 0;
+        wrongClicks = 0;
+        txtTime.value = totalTime;
+        timeValue = totalTime;
+        txtScore.value = 0;
+        scoreValue = 0;
+        blnGameStarted = 1;
+        if (checkBox.checked == true) {
+            maxBox = elementNum;
+            setupRandom();
+            box = 10;
+            setTimeout(startTime, 10);
+            disableStart();
+            highlightRandomBox();
+            game = setInterval(gameLoop, timeOut)
+        } else {
+            enableStart()
+        }
+        if (displayCount != 0) {
+            throw "bad displayCount: " + displayCount
+        }
+    }
+
+    function resetGame() {
+      var checkBox = document.getElementById("myCheck");
+      checkBox.checked = false;
+        clearInterval(timer);
+        clearInterval(game);
+        dehighlight();
+        initialize()
+    }
+    var animSpeed = 75;
+
+    function animate() {
+        btnStart.disabled = true;
+        if (index < maxBox+1) {
+            document.getElementById("td" + (index - 1)).style.backgroundColor = "white";
+            document.getElementById("td" + index).style.backgroundColor = "yellowgreen";
+            setTimeout(animate, animSpeed);
+            index = index + 1
+        } else {
+            setTimeout(function() {
+                var a = document.getElementsByTagName("td");
+                a.map(function(b) {
+                    b.style.backgroundColor = "white"
+                })
+            }, animSpeed);
+            initialize()
+        }
+    }
+
+    function incrementScore() {
+        scoreValue++;
+        txtScore.value = scoreValue;
+        if (is_ie8) {
+            txtScore.innerHTML = scoreValue;
+            document.styleSheets[0].addRule("#txtScore:after", "content: '" + scoreValue + "';")
+        }
+    }
+
+    function checkClick(a) {
+        if (blnGameStarted) {
+            if (a.id == box) {
+                if (!clicked) {
+                    incrementScore()
+                }
+            } else {
+                wrongClicks++;
+                a.style.backgroundColor = "red";
+                setTimeout(clearBoxes, 200);
+                boxes.push(a.style)
+            }
+            clicked = true
+        }
+    }
+
+    function clearBoxes() {
+        if (boxes.length) {
+            boxes.map(function(a) {
+                a.backgroundColor = "white"
+            })
+        }
+    }
+    var randBag;
+    var oldRand;
+
+    function setupRandom() {
+        randBag = [];
+        for (var b = 10; b < maxBox; b++) {
+            randBag.push(b)
+        }
+        var a = randRange(0, maxBox-10);
+        oldRand = randBag.splice(a, 1)[0]
+    }
+
+    function randRange(b, a) {
+        return (Math.floor(Math.random() * (a))) + b
+    }
+
+    function randMax(a) {
+        return (Math.floor(Math.random() * (a)))
+    }
+
+    function getRandom() {
+        var a = randMax(maxBox-11);
+        var b = randBag.splice(a, 1)[0];
+        randBag.push(oldRand);
+        oldRand = b;
+        return oldRand
+    }
+
+    function highlightRandomBox() {
+        box = "td" + getRandom();
+        document.getElementById(box).style.backgroundColor = "yellowgreen";
+        clicked = false
+    }
+
+    function dehighlight() {
+        displayCount++;
+        document.getElementById(box).style.backgroundColor = "white"
+    }
+
+    function gameLoop() {
+        dehighlight();
+        if (blnGameStarted) {
+            highlightRandomBox()
+        }
+    }
+
+    function disableStart() {
+        slider.slider({
+            disabled: true
+        });
+        btnStart.disabled = true;
+        blnGameStarted = true
+    }
+
+    function enableStart() {
+        slider.slider({
+            disabled: false
+        });
+        btnStart.disabled = false;
+        blnGameStarted = false
+    }
+
+    function logf(a) {
+        if (tlog && tlog.innerHTML) {
+            tlog.innerHTML = a
+        } else {
+            if (a != "...") {
+                alert(a)
+            }
+        }
+    }
+
+    function decTimer() {
+        timeValue--;
+        txtTime.value = timeValue;
+        if (timeValue == 0) {
+            logf("Time Up!! You Scored " + txtScore.value + " out of " + displayCount + "\n\n No. of drunkard%$# clicks: " + wrongClicks);
+            enableStart();
+            dehighlight();
+            clearInterval(timer);
+            clearInterval(game)
+        }
+    }
+
+    function startTime() {
+        timer = setInterval(decTimer, 1000)
+    };
+</script>
+
+
+    <title>Reaction Speed</title>
+  </head>
+  <body class="c4" marginwidth="0" marginheight="0">
+    <input type="checkbox" id="myCheck">    &nbsp;
+    <input type="submit" value="Save" onclick="save()">
+    &nbsp; 
+    <input type="submit" value="Load" onclick="loadbutton()">   
+    <div id="load">&nbsp;</div>
+    <input type="submit" value="Create" onclick="tableCreate()">   
+     &nbsp; &nbsp;
+    <select id="chOb" onChange="modOb(this.value)"></select>
+
+
+
+    <div>&nbsp;</div>
+    &nbsp; &nbsp; &nbsp;<input type="submit" value="&uarr;" onclick="tablemodUp()">
+    <div></div>
+    <input type="submit" value="&larr;" onclick="tablemodLeft()">
+    <input type="submit" value="&rarr;" onclick="tablemodRight()">
+     &nbsp; &nbsp;
+    <select onChange="modDisp(this.value)">
+      <option value="10">10px</option>
+      <option value="25">25px</option>
+      <option value="50">50px</option>
+      <option value="100">100px</option>    
+    </select>
+    <div></div>
+    &nbsp; &nbsp; &nbsp;<input type="submit" value="&darr;" onclick="tablemodDown()">
+    <div></div>
+
+    <div>&nbsp;</div>
+    <div>Width &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Height</div>
+    <input type="submit" value="-" onclick="tablemodWm()">
+    <input type="submit" value="+" onclick="tablemodWp()">
+    &nbsp; &nbsp;
+    <input type="submit" value="-" onclick="tablemodHm()">
+    <input type="submit" value="+" onclick="tablemodHp()">
+     &nbsp; &nbsp;
+    <select onChange="modchArea(this.value)">
+      <option value="10">10px</option>
+      <option value="25">25px</option>
+      <option value="50">50px</option>
+      <option value="100">100px</option>    
+    </select>
+    <div>&nbsp;</div>
+
+    <div>Row &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Column &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Both</div>
+    <input type="submit" value="-" onclick="tablemodRM()">
+    <input type="submit" value="+" onclick="tablemodR()">
+    &nbsp; &nbsp;
+    <input type="submit" value="-" onclick="tablemodCM()">
+    <input type="submit" value="+" onclick="tablemodC()">
+    &nbsp; &nbsp;
+    <input type="submit" value="-" onclick="tablemodBM()">
+    <input type="submit" value="+" onclick="tablemodBP()">
+
+    <div id="main_content" style="min-height:126px">
+    <div style="width:400px;margin:0.3em auto auto;min-height:50px;">
+      <div style="display:inline;float:left">
+        <b style="display:block">Score:</b>
+        <input type="text" id="txtScore" name="txtScore" value="0" readonly="" char="10" class="c2 glass">
+      </div>
+      <div style="width:220px;display:inline;float:left;margin-top:18px">
+        <div style="margin:auto;width:154px">
+        <input type="button" id="btnStart" name="btnStart" value="Start" onclick="initialize();" class="c3 glass">
+        <input type="button" id="btnRestart" name="btnRestart" value="Reset" onclick="resetGame();" class="c3 glass">
+        </div>
+      </div>
+      <div style="display:inline;float:right">
+        <b style="display:block">Time:</b>
+        <input type="text" id="txtTime" name="txtTime" value="60" readonly="" char="10" class="c2 glass">
+      </div>
+    </div>
+    <div style="width:400px;margin:auto;margin-top:5px"><div class="glass" id="intervalTime" style="display:inline-block;margin-right:0.6em;min-width:120px;font-size:10pt;font-weight:bold">Speed: 1s</div><div id="speed_slider" style="width:200px;margin:auto;background:linear-gradient(to left, yellow, green);display:inline-block;float:right" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><a class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div></div>
+    <div id="logg" style="width:300px;margin:auto;text-align:center;margin-top:0.6em;min-height:30px"></div>
+  </div>
+  
+
+</body></html>
