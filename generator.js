@@ -32,7 +32,8 @@
     opt.value = numobj;
     opt.innerHTML = numobj;
     select.appendChild(opt);
-    select.value=numobj;
+    select.value = numobj;
+    renumber();
   }
 
   function modOb(value){

@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+﻿<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style type="text/css">p.MsoNormal,li.MsoNormal,div.MsoNormal{margin:0;margin-bottom:.0001pt;font-size:12.0pt;font-family:"Times New Roman"}h2{margin-top:12.0pt;margin-right:0;margin-bottom:3.0pt;margin-left:0;page-break-after:avoid;font-size:14.0pt;font-family:Arial;font-style:italic}h3{margin-top:12.0pt;margin-right:0;margin-bottom:3.0pt;margin-left:0;page-break-after:avoid;font-size:13.0pt;font-family:Arial}a:link,span.MsoHyperlink{color:blue;text-decoration:underline}a:visited,span.MsoHyperlinkFollowed{color:purple;text-decoration:underline}@page Section1{size:8.5in 11.0in;margin:1.0in 1.25in 1.0in 1.25in}div.Section1{page:Section1}body.c4{cursor:default}input.c3{width:75px}input.c2{font-weight:bold;width:75px}table.c1{border-color:blue;boder-style:outset}table.c1 td{width:21px;height:21px}table.c1 tr{height:21px}.ui-slider .ui-slider-handle{border-radius:10px;border:1px solid rgba(0,0,0,0.5);background:grey;background:rgba(0,0,0,0.1);box-shadow:0 2px 6px rgba(0,0,0,0.5),inset 0 1px rgba(25,25,25,0.5),inset 0 10px 20px rgba(25,25,25,0.5),inset 0 -15px 30px rgba(0,0,0,0.8)}.glass{color:white;border:1px solid rgba(0,0,0,0.5);border-radius:10px;background:rgba(0,0,0,0.1);box-shadow:0 2px 6px rgba(0,0,0,0.5),inset 0 1px rgba(25,25,25,0.5),inset 0 10px 20px rgba(25,25,25,0.5),inset 0 -15px 30px rgba(0,0,0,0.8);padding:.2em .4em}</style>
-    <link type="text/css" rel="stylesheet" href="./jquery-ui-1.10.2.custom.min.css">
-    <script type="text/javascript" src="./jquery.min.js(1).download"></script>
-    <script type="text/javascript" src="./jquery-ui-1.10.2.custom.min.js.download"></script>
-    <script type="text/javascript" src="./es5-shim.js.download"></script>
-    <script type="text/javascript" src="./fix_height.js.download"></script>
-    <script type="text/javascript" src="./misc.js"></script>
-    <script type="text/javascript" src="./generator.js"></script>
+    <link type="text/css" rel="stylesheet" href="jquery-ui-1.10.2.custom.min.css">
+    <link rel="stylesheet" href="w3.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.10.2.custom.min.js"></script>
+    <script type="text/javascript" src="es5-shim.js"></script>
+    <script type="text/javascript" src="fix_height.js"></script>
+    <script type="text/javascript" src="generator.js"></script>
 <!--    <script type="text/javascript" src="reflex3.js"></script>-->
 <script type="text/javascript">
     var maxBox;
@@ -121,9 +120,11 @@
             setTimeout(startTime, 10);
             disableStart();
             highlightRandomBox();
-            game = setInterval(gameLoop, timeOut)
-        } else {
-            enableStart()
+            game = setInterval(gameLoop, timeOut);
+        }
+        else {
+            enableStart();
+            highlightRandomBox();
         }
         if (displayCount != 0) {
             throw "bad displayCount: " + displayCount
@@ -195,7 +196,7 @@
 
     function setupRandom() {
         randBag = [];
-        for (var b = 10; b < maxBox; b++) {
+        for (var b = 10; b <= maxBox; b++) {
             randBag.push(b)
         }
         var a = randRange(0, maxBox-10);
@@ -215,7 +216,8 @@
         var b = randBag.splice(a, 1)[0];
         randBag.push(oldRand);
         oldRand = b;
-        return oldRand
+        console.log(oldRand);
+        return oldRand;
     }
 
     function highlightRandomBox() {
@@ -226,7 +228,7 @@
 
     function dehighlight() {
         displayCount++;
-        document.getElementById(box).style.backgroundColor = "white"
+        document.getElementById(box).style.backgroundColor = "white";
     }
 
     function gameLoop() {
@@ -249,7 +251,7 @@
             disabled: false
         });
         btnStart.disabled = false;
-        blnGameStarted = false
+        blnGameStarted = false;
     }
 
     function logf(a) {
@@ -283,42 +285,44 @@
     <title>Reaction Speed</title>
   </head>
   <body class="c4" marginwidth="0" marginheight="0">
+    <div>
     <input type="checkbox" id="myCheck">    &nbsp;
-    <input type="submit" value="Save" onclick="save()">
+    <input type="submit" value="Save" onclick="save()" class="w3-btn">
     &nbsp; 
-    <input type="submit" value="Load" onclick="loadbutton()">   
+    <input type="submit" value="Load" onclick="loadbutton()" class="w3-btn">   
     <div id="load">&nbsp;</div>
-    <input type="submit" value="Create" onclick="tableCreate()">   
+    <input type="submit" value="Create" onclick="tableCreate()" class="w3-btn">   
      &nbsp; &nbsp;
-    <select id="chOb" onChange="modOb(this.value)"></select>
+    <select id="chOb" onchange="modOb(this.value)"></select>
 
 
 
     <div>&nbsp;</div>
-    &nbsp; &nbsp; &nbsp;<input type="submit" value="&uarr;" onclick="tablemodUp()">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="↑" onclick="tablemodUp()" class="w3-btn">
     <div></div>
-    <input type="submit" value="&larr;" onclick="tablemodLeft()">
-    <input type="submit" value="&rarr;" onclick="tablemodRight()">
-     &nbsp; &nbsp;
-    <select onChange="modDisp(this.value)">
+    <input type="submit" value="←" onclick="tablemodLeft()" class="w3-btn">
+    &nbsp;&nbsp;
+    <input type="submit" value="→" onclick="tablemodRight()" class="w3-btn">
+     &nbsp;&nbsp;
+    <select onchange="modDisp(this.value)">
       <option value="10">10px</option>
       <option value="25">25px</option>
       <option value="50">50px</option>
       <option value="100">100px</option>    
     </select>
     <div></div>
-    &nbsp; &nbsp; &nbsp;<input type="submit" value="&darr;" onclick="tablemodDown()">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="↓" onclick="tablemodDown()" class="w3-btn">
     <div></div>
 
     <div>&nbsp;</div>
-    <div>Width &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Height</div>
-    <input type="submit" value="-" onclick="tablemodWm()">
-    <input type="submit" value="+" onclick="tablemodWp()">
+    <div>&nbsp;&nbsp;&nbsp; Width &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Height</div>
+    <input type="submit" value="-" onclick="tablemodWm()" class="w3-btn w3-circle">
+    <input type="submit" value="+" onclick="tablemodWp()" class="w3-btn w3-circle">
     &nbsp; &nbsp;
-    <input type="submit" value="-" onclick="tablemodHm()">
-    <input type="submit" value="+" onclick="tablemodHp()">
+    <input type="submit" value="-" onclick="tablemodHm()" class="w3-btn w3-circle">
+    <input type="submit" value="+" onclick="tablemodHp()" class="w3-btn w3-circle">
      &nbsp; &nbsp;
-    <select onChange="modchArea(this.value)">
+    <select onchange="modchArea(this.value)">
       <option value="10">10px</option>
       <option value="25">25px</option>
       <option value="50">50px</option>
@@ -326,36 +330,33 @@
     </select>
     <div>&nbsp;</div>
 
-    <div>Row &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Column &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Both</div>
-    <input type="submit" value="-" onclick="tablemodRM()">
-    <input type="submit" value="+" onclick="tablemodR()">
+    <div>&nbsp;&nbsp;&nbsp;&nbsp; Row &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Column &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Both</div>
+    <input type="submit" value="-" onclick="tablemodRM()" class="w3-btn w3-circle">
+    <input type="submit" value="+" onclick="tablemodR()" class="w3-btn w3-circle">
     &nbsp; &nbsp;
-    <input type="submit" value="-" onclick="tablemodCM()">
-    <input type="submit" value="+" onclick="tablemodC()">
+    <input type="submit" value="-" onclick="tablemodCM()" class="w3-btn w3-circle">
+    <input type="submit" value="+" onclick="tablemodC()" class="w3-btn w3-circle">
     &nbsp; &nbsp;
-    <input type="submit" value="-" onclick="tablemodBM()">
-    <input type="submit" value="+" onclick="tablemodBP()">
-
-    <div id="main_content" style="min-height:126px">
-    <div style="width:400px;margin:0.3em auto auto;min-height:50px;">
-      <div style="display:inline;float:left">
-        <b style="display:block">Score:</b>
-        <input type="text" id="txtScore" name="txtScore" value="0" readonly="" char="10" class="c2 glass">
-      </div>
-      <div style="width:220px;display:inline;float:left;margin-top:18px">
-        <div style="margin:auto;width:154px">
-        <input type="button" id="btnStart" name="btnStart" value="Start" onclick="initialize();" class="c3 glass">
-        <input type="button" id="btnRestart" name="btnRestart" value="Reset" onclick="resetGame();" class="c3 glass">
-        </div>
-      </div>
-      <div style="display:inline;float:right">
-        <b style="display:block">Time:</b>
-        <input type="text" id="txtTime" name="txtTime" value="60" readonly="" char="10" class="c2 glass">
-      </div>
+    <input type="submit" value="-" onclick="tablemodBM()" class="w3-btn w3-circle">
+    <input type="submit" value="+" onclick="tablemodBP()" class="w3-btn w3-circle">
     </div>
-    <div style="width:400px;margin:auto;margin-top:5px"><div class="glass" id="intervalTime" style="display:inline-block;margin-right:0.6em;min-width:120px;font-size:10pt;font-weight:bold">Speed: 1s</div><div id="speed_slider" style="width:200px;margin:auto;background:linear-gradient(to left, yellow, green);display:inline-block;float:right" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><a class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div></div>
+    <div id="main_content" style="min-height:126px">
+    <div>&nbsp;</div>
+     <div id="intervalTime">Speed: 1s</div><div id="speed_slider" style="width:200px;margin:auto;background:linear-gradient(to left, gray, black);display:inline-block;float:left" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><a class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
+    <div>&nbsp;</div> 
+    <div>&nbsp;</div>
+    &nbsp;&nbsp;
+    <input type="button" id="btnStart" name="btnStart" value="Start" onclick="initialize();" class="w3-btn">
+    &nbsp;&nbsp;&nbsp;
+    <input type="button" id="btnRestart" name="btnRestart" value="Reset" onclick="resetGame();" class="w3-btn">
+    <div>&nbsp;</div>
+    <div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Score &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time</div>
+        <input type="text" id="txtScore" name="txtScore" value="0" readonly="" char="10" class="w3-center">
+        <input type="text" id="txtTime" name="txtTime" value="60" readonly="" char="10" class="w3-center">
+    </div>
     <div id="logg" style="width:300px;margin:auto;text-align:center;margin-top:0.6em;min-height:30px"></div>
-  </div>
   
+  
+
 
 </body></html>
