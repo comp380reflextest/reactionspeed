@@ -184,7 +184,8 @@
   if (objID > 1){
     var x = objID-1
     var tbF = document.getElementById("hi"+x).getElementsByTagName('tbody')[0].id
-    k = parseInt(tbF); //Read the ID from the previous object's tbody, use as floor
+    k = parseInt(tbF); //Read the ID from the previous object's tbody, use as floor (need to add 1)
+    k++;
   }
   else{k=10;}
   var tbl = document.getElementById("hi"+objID),
@@ -229,6 +230,9 @@
       close.setAttribute( "onClick", "savebutton()" )
       close.id="savesubmit";
       ref.appendChild(close);
+      if (localStorage) {
+        localStorage.lastField = btoa(b);
+      }
     }
   }
 
@@ -252,6 +256,9 @@
   submit.setAttribute( "onClick", "load()" )
   submit.id="loadsubmit"
   ref.appendChild(submit);
+  if (localStorage && localStorage.lastField) {
+        input.value = localStorage.lastField;
+    }
   }
   }
 
